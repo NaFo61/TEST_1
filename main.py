@@ -26,7 +26,8 @@ class MyWindow(QMainWindow):
         self.update()
 
     def drawing(self, qp):
-        qp.setBrush(QColor('Yellow'))
+        r, g, b = randint(0, 255), randint(0, 255), randint(0, 255)
+        qp.setBrush(QColor(r, g, b))
         leigt = randint(10, 300)
         qp.drawEllipse(self.x - leigt // 2, self.y - leigt // 2, leigt, leigt)
         mywindow.show()
